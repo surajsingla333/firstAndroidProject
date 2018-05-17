@@ -1,79 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="MainActivity"
-    android:orientation="vertical"
-    android:padding="8dp">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/head_text_view"
-        android:layout_width="wrap_content"
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Quantity"
-        android:textAllCaps="true"
-        android:padding="8dp"/>
-    <LinearLayout
-        android:id="@+id/linear_layout"
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/head_text_view">
+        android:orientation="vertical"
+        android:padding="8dp"
+        tools:context="MainActivity">
+
+        <EditText
+            android:id="@+id/user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#6A1B9A"
+            android:hint="@string/name"
+            android:inputType="textCapWords" />
+
+        <EditText
+            android:id="@+id/user_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email"
+            android:textColor="#6A1B9A"
+            android:inputType="textEmailAddress"
+            app:layout_constraintTop_toBottomOf="@id/user_name" />
+
+        <TextView
+            android:id="@+id/cream_text_view"
+            style="@style/headStyle"
+            android:text="@string/toppings"
+            app:layout_constraintTop_toBottomOf="@id/user_email" />
+
+        <CheckBox
+            android:id="@+id/whipped_cream_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="24dp"
+            android:text="@string/creamTop"
+            android:textSize="16sp"
+            android:onClick="toastBoxCream"
+            app:layout_constraintTop_toBottomOf="@id/cream_text_view" />
+
+        <CheckBox
+            android:id="@+id/chocolate_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="24dp"
+            android:text="@string/chocoTop"
+            android:textSize="16sp"
+            android:onClick="toastBoxChoco"
+            app:layout_constraintTop_toBottomOf="@id/whipped_cream_checkbox" />
+
+        <TextView
+            android:id="@+id/head_text_view"
+            style="@style/headStyle"
+            android:text="@string/Quant"
+            app:layout_constraintTop_toBottomOf="@id/chocolate_checkbox" />
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/linear_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/head_text_view">
+
             <Button
                 android:id="@+id/decrease_button"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                app:layout_constraintTop_toBottomOf="@id/head_text_view"
+                android:onClick="decrease"
                 android:padding="8dp"
                 android:text="-"
-                android:onClick="decrease"/>
+                app:layout_constraintTop_toBottomOf="@id/head_text_view" />
+
             <TextView
                 android:id="@+id/quantity_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:padding="16dp"
                 android:text="0"
-                android:textSize="16sp"
                 android:textColor="#000000"
-                android:padding="16dp"/>
+                android:textSize="16sp" />
+
             <Button
                 android:id="@+id/increase_button"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
+                android:onClick="increase"
                 android:padding="8dp"
-                android:text="+"
-                android:onClick="increase"/>
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/headPrice_text_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="price"
-        android:textAllCaps="true"
-        app:layout_constraintTop_toBottomOf="@id/linear_layout"
-        android:padding="8dp"/>
-    <TextView
-        android:id="@+id/price_text_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/headPrice_text_view"
-        android:text= "0"
-        android:textSize="16sp"
-        android:textColor="#000000"
-        android:padding="8dp"/>
-    <Button
-        android:id="@+id/order_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/price_text_view"
-        android:padding="8dp"
-        android:text="order"
-        android:onClick="submitOrder"/>
+                android:text="+" />
+        </LinearLayout>
 
 
-</android.support.constraint.ConstraintLayout>
+        <Button
+            android:id="@+id/order_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="submitOrder"
+            android:layout_marginTop="16dp"
+            android:padding="8dp"
+            android:text="@string/order"
+            app:layout_constraintTop_toBottomOf="@id/linear_layout" />
+
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

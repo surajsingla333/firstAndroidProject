@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">Just Java</string>
+
+    //strings used in app by us
+
+    <string name="toppings">Toppings</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="order">order</string>
+    <string name="Quant">quantity</string>
+    <string name="chocoTop">Choco Chips</string>
+    <string name="creamTop">Whipped Cream</string>
+    <string name="minimumAlert">You\'ve gotta order something dude!</string>
+    <string name="maxAlert">\"Can\'t have more than this.\"</string>
+    <string name="orderSummaryName">Name</string>
+    <string name="orderSummaryQuant">Quantity</string>
+    <string name="orderSummaryCream">Add Whipped Cream ?</string>
+    <string name="orderSummaryChoco">Add Choco-Chips ?</string>
+    <string name="orderSummaryPrice">Price</string>
+    <string name="orderSummaryGreeting">Thank You !</string>
+    <string name="subject">Your order Summary.</string>
+    <string name="addCream">Whipped Cream is Added.</string>
+    <string name="removeCream">Whipped Cream is Removed.</string>
+    <string name="addChoco">ChocoChips are Added.</string>
+    <string name="removeChoco">ChocoChips are Removed.</string>
 </resources>
+

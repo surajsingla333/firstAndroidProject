@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Just Java</string>
+    <string name="orderSummaryGreeting">Merci !</string>
+    <string name="removeChoco">ChocoChips sont supprimés.</string>
+    <string name="addChoco">ChocoChips sont ajoutés.</string>
+    <string name="removeCream">La crème fouettée est enlevée.</string>
+    <string name="addCream">La crème fouettée est ajoutée.</string>
+    <string name="subject">Votre résumé de commande.</string>
+    <string name="orderSummaryPrice">Prix</string>
+    <string name="orderSummaryChoco">Ajouter des Choco-Chips?</string>
+    <string name="orderSummaryCream">Ajouter la crème fouettée?</string>
+    <string name="orderSummaryQuant">Quantité</string>
+    <string name="orderSummaryName">Prénom</string>
+    <string name="maxAlert">Je ne peux pas avoir plus que ça.</string>
+    <string name="minimumAlert">Tu dois commander quelque chose mec!</string>
+    <string name="creamTop">Crème fouettée</string>
+    <string name="chocoTop">Choco Chips</string>
+    <string name="Quant">quantité</string>
+    <string name="toppings">Garnitures</string>
+    <string name="name">Prénom</string>
+    <string name="email">Email</string>
+    <string name="order">commande</string>
+</resources>
